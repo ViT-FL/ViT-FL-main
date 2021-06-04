@@ -1,4 +1,3 @@
-# ViT-FL-main
 # Vision Transformer in Federated Learning 
 Pytorch implementation 
 
