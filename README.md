@@ -1,5 +1,4 @@
 # Vision Transformer in Federated Learning 
-Pytorch implementation 
 Coming soon
 
 ## Usage
