@@ -1,5 +1,5 @@
 # Vision Transformer in Federated Learning 
-* **Pytorch implementation for paper:** ["Rethinking Architecture Design for Tackling Data Heterogeneity in Federated Learning"](https://arxiv.org/abs/2106.06047)
+* **Pytorch implementation for paper:** ["Rethinking Architecture Design for Tackling Data Heterogeneity in Federated Learning"]
 * Note that we simulate either CWT or FedAVG in one local machine for research usage, donot involve real communication between different clients. 
 
 ## Usage
