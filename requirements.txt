@@ -3,3 +3,4 @@ numpy
 tensorboard
 Pillow
 pandas
+timm
