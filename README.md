@@ -28,16 +28,13 @@ We provide the data partitions for Cifar-10 and CelebA datasets
 ### 2. Set (download) the Pretrained Models
 - We use ImageNet1k pre-train in our paper 
 - For ViTs: To use ImageNet1K pretrained models for ViTs, please modify the loading link of pretrained models in timm mannually (modify the link setting of default_cfgs = { } in the timm/models/vision_transformer.py file): 
-    * For ViT(T),   
-    'vit_tiny_patch16_224': _cfg(
+    * For ViT(T):    'vit_tiny_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
         'Ti_16-i1k-300ep-lr_0.001-aug_light0-wd_0.1-do_0.0-sd_0.0.npz'),
-    * For ViT(S), 
-    'vit_small_patch16_224': _cfg(
+    * For ViT(S):    'vit_small_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
             'S_16-i1k-300ep-lr_0.001-aug_medium2-wd_0.1-do_0.0-sd_0.0.npz'), 
-    * For ViT(B), 
-        'vit_base_patch16_224': _cfg(
+    * For ViT(B):    'vit_base_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
             'B_16-i1k-300ep-lr_0.001-aug_medium2-wd_0.1-do_0.1-sd_0.1.npz'),
 - For Swin-Transformer: Please refer to https://github.com/microsoft/Swin-Transformer for the pretrained models, download the  model and put it at ```--pretrained_dir``` folder
