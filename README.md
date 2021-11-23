@@ -19,22 +19,24 @@ We provide the data partitions for Cifar-10 and CelebA datasets
     
 - For CelebA dataset (refer to https://leaf.cmu.edu/ for more usage of CelebA dataset)
     * Get the raw images at https://drive.google.com/file/d/0B7EVK8r0v71pZjFTYXZWM3FlRnM/view?usp=sharing&resourcekey=0-dYn9z10tMJOBAkviAcfdyQ
-    * Put the extracted the raw image folder at sub-folder data
-    * Download the pre-processed data distributions at https://drive.google.com/drive/folders/1ZErR7RMSVImkzYzz0hLl25f9agJwp0Zx?usp=sharing
-    * Put the downloaded CelebA.npy at sub-folder data 
-   
+    * Put the extracted raw image folder at sub-folder data
+    * The pre-processed data distributions is provided CelebA.npy at sub-folder data
+
 - Retina dataset (Coming soon)
 
 ### 2. Set (download) the Pretrained Models
 - We use ImageNet1k pre-train in our paper 
 - For ViTs: To use ImageNet1K pretrained models for ViTs, please modify the loading link of pretrained models in timm mannually (modify the link setting of default_cfgs = { } in the timm/models/vision_transformer.py file): 
-    * For ViT(T):    'vit_tiny_patch16_224': _cfg(
+    * For ViT(T),   
+    'vit_tiny_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
         'Ti_16-i1k-300ep-lr_0.001-aug_light0-wd_0.1-do_0.0-sd_0.0.npz'),
-    * For ViT(S):    'vit_small_patch16_224': _cfg(
+    * For ViT(S), 
+    'vit_small_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
             'S_16-i1k-300ep-lr_0.001-aug_medium2-wd_0.1-do_0.0-sd_0.0.npz'), 
-    * For ViT(B):    'vit_base_patch16_224': _cfg(
+    * For ViT(B), 
+        'vit_base_patch16_224': _cfg(
         url='https://storage.googleapis.com/vit_models/augreg/'
             'B_16-i1k-300ep-lr_0.001-aug_medium2-wd_0.1-do_0.1-sd_0.1.npz'),
 - For Swin-Transformer: Please refer to https://github.com/microsoft/Swin-Transformer for the pretrained models, download the  model and put it at ```--pretrained_dir``` folder
