@@ -19,6 +19,7 @@ from scipy import ndimage
 
 import models.configs as configs
 
+
 logger = logging.getLogger(__name__)
 
 
@@ -270,18 +271,19 @@ class VisionTransformer(nn.Module):
         x, attn_weights = self.transformer(x)
         logits = self.head(x[:, 0])
 
-        if labels is not None:
-            if self.num_classes == 1:
-                # loss_fct = CrossEntropyLoss()
-                loss_fct = torch.nn.L1Loss()
-                loss = loss_fct(logits.view(-1, self.num_classes), labels.view(-1))
-            else:
-                loss_fct = CrossEntropyLoss()
-                loss = loss_fct(logits.view(-1, self.num_classes), labels.view(-1))
-
-            return loss
-        else:
-            return logits, attn_weights
+        # if labels is not None:
+        #     if self.num_classes == 1:
+        #         # loss_fct = CrossEntropyLoss()
+        #         loss_fct = torch.nn.L1Loss()
+        #         loss = loss_fct(logits.view(-1, self.num_classes), labels.view(-1))
+        #     else:
+        #         loss_fct = CrossEntropyLoss()
+        #         loss = loss_fct(logits.view(-1, self.num_classes), labels.view(-1))
+        #
+        #     return loss
+        # else:
+        #     return logits, attn_weights
+        return logits
 
     def load_from(self, weights):
         with torch.no_grad():
